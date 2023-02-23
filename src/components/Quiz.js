@@ -1,7 +1,14 @@
-import React from 'react'
-import Questions from './Questions'
+import React, { useEffect } from 'react'
+import Questions from './Questions';
+import {useSelector} from 'react-redux'
 
-const Quiz = () => {
+export default  function Quiz  () {
+
+    const {questions} = useSelector(state => state);
+
+    useEffect (()=>{
+        console.log (questions.queue);
+    })
 //   prev and next botton handler
     function onNext(){
         console.log('on next click');
@@ -23,4 +30,3 @@ const Quiz = () => {
   )
 }
 
-export default Quiz

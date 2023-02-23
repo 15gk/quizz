@@ -1,10 +1,16 @@
-import React ,{useState} from 'react'
-import data from '../data/data.js'
+import React ,{useEffect ,useState} from 'react'
+import data from '../data/data.js';
+import { useFetchQuestion } from '../hooks/FetchQuestion.js';
 
 
 const Questions = () => {
     const [checked,setChecked]=useState(undefined);
+    useFetchQuestion();
     const question =data[0]
+
+    useEffect (()=>{
+      console.log (question);
+    })
 
     function onSelect(){
         // setChecked(true);

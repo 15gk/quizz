@@ -28,6 +28,23 @@ export default [
 
     },
     {
+        id :4,
+        question:'which methods can be used to display data in one form using Javascript',
+        options :[
+            'document.write()',
+            'console.log()',
+            'window.alert()',
+        ]
 
-    }
+    },
+    {
+        id :5,
+        question:'which methods can be used to display data in one form using Javascript',
+        options :[
+            'document.write()',
+            'console.log()',
+            'window.alert()',
+        ]
+
+    },
 ]
