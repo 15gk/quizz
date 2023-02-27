@@ -1,16 +1,14 @@
-import { createSlice } from "@reduxjs/toolkit"
 
-export const resultReducer = createSlice ({
-    name :'result',
-    initialState :{
-        userId : null,
-        result :[]
-    },
-    reducers :{
-        setUserId : (state,action)=>{
-            state.userId=action.payload
-        }
-    }
+import { combineReducers, configureStore } from '@reduxjs/toolkit';
+
+/** call reducers */
+import questionReducer from './question_reducer';
+import resultReducer from './result_reducer';
+
+const rootReducer = combineReducers({
+    questions : questionReducer,
+    result : resultReducer
 })
-export const {setUserId}=resultReducer.actions;
-export default resultReducer.reducer;
+
+/** create store with reducer */
+export default configureStore({ reducer : rootReducer});
