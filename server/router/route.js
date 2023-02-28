@@ -1,7 +1,8 @@
 import {Router}from "express";
+const router =Router ();
 import * as controller from '../controllers/controller.js'
 
-const router =Router ();
+
 //question routes api
 
 
