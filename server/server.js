@@ -1,11 +1,11 @@
 import express from "express";
 import morgan from "morgan";
 import cors from 'cors';
-import {config} from 'dotenv';
+import { config } from 'dotenv';
 import router from "./router/route.js";
 import connect from "./database/conn.js";
 
-const app =express()
+const app =express();
 //app middleware
 app.use (morgan('tiny'));
 app.use(cors());
@@ -38,4 +38,4 @@ connect().then(()=>{
 }).catch(error=>{
     console.log("database error")
 })
-
+export default app;
